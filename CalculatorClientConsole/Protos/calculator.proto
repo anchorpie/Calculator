@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "CalulatorServer";
+
+service Calculator {
+    rpc GetExpressionResult (Expression) returns (CalculationResult);
+}
+
+message Expression {
+    string receivedExpression = 1;
+}
+
+message CalculationResult{
+    string result = 1;
+}
